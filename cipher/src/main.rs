@@ -73,11 +73,11 @@ fn cipher(alphabet: HashMap<u8,char>, user_input: String) -> String {
                 None => continue,
             };
 
-            let shifted_index = (index + shift) % 26; // Apply the shift and wrap around if necessary
-            let shifted_char = *alphabet.get(&shifted_index).unwrap(); // Get the shifted character from the alphabet
+            let shifted_index = (index + shift) % 26;
+            let shifted_char = *alphabet.get(&shifted_index).unwrap();
             ciphered_string.push(shifted_char);
         } else {
-            ciphered_string.push(c); // Non-alphabetic characters remain unchanged
+            ciphered_string.push(c);
         }
     }
     
