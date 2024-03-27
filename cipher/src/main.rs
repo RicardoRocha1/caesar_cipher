@@ -16,6 +16,11 @@ fn main() {
     let mut ciphered_string: String = cipher(alphabet, user_input);
 
     println!("\nCipher completed: \n{}", ciphered_string);
+
+    println!("\nCipher printed above. Press enter to exit.");
+
+    let mut user_exit: String = String::new();
+    io::stdin().read_line(&mut user_exit).expect("Exiting.");
 }
 
 fn alphabet_creation(letters: String) -> HashMap<u8, char> {
